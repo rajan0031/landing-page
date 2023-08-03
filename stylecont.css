@@ -1,0 +1,82 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #0057ff;
+  text-shadow: 2px 2px #f5a623;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #777;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #0057ff;
+  text-shadow: 1px 1px #f5a623;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+input[type="submit"] {
+  background-color: #0057ff;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #1e40af;
+}
+
+input[type="submit"]:active {
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+
+#btn {
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+  height: 34px;
+  border-radius: 10px;
+  background-color: #0057ff;
+}
+
+#btn :hover {
+  text-transform: uppercase;
+}

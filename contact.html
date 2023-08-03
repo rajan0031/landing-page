@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="stylecont.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Get in touch with us using the form below:</p>
+      <form method="POST" class="form" name="google-sheet">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" required />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" required />
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button id="btn">submit</button>
+      </form>
+    </div>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwEfQtv4t0tU-E70y6Yo07r4vrCo-DTV-4jIBiv7qGpwkpmVPrk31fxKfuBxdVdTPGd/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) =>
+            alert("Thanks for Contacting us..! We Will Contact You Soon...")
+          )
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <script>
+      var btn = document.getElementById("btn");
+      function func() {
+        location.assign(
+          "https://rajan0031.github.io/random-quotes-of-the-day/"
+        );
+      }
+    </script>
+  </body>
